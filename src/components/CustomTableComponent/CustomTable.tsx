@@ -67,10 +67,14 @@ const CustomTable: React.FC<CustomTableProps> = ({
   }
   console.log('data', data)
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} data-testid="table-container">
       {isLoading && (
-        <Table sx={{ minWidth: 650, padding: 10 }} aria-label="simple table">
-          <TableHead>
+        <Table
+          sx={{ minWidth: 650, padding: 10 }}
+          aria-label="simple table"
+          data-testid="table-loading"
+        >
+          <TableHead data-testid="table-loading-head">
             <TableRow>
               {headers.map((header, index) => (
                 <TableCell key={index} align={header.align}>
@@ -78,12 +82,18 @@ const CustomTable: React.FC<CustomTableProps> = ({
                 </TableCell>
               ))}
             </TableRow>
-          </TableHead>{' '}
-          <TableBody>{generateSkeletons(headers)}</TableBody>
+          </TableHead>
+          <TableBody data-testid="table-loading-skeleton">
+            {generateSkeletons(headers)}
+          </TableBody>
         </Table>
       )}
-      <Table sx={{ minWidth: 650, padding: 10 }} aria-label="simple table">
-        <TableHead>
+      <Table
+        sx={{ minWidth: 650, padding: 10 }}
+        aria-label="simple table"
+        data-testid="table"
+      >
+        <TableHead data-testid="table-head">
           <TableRow>
             {headers.map((header, index) => (
               <TableCell key={index + header.title} align={header.align}>
@@ -92,7 +102,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
             ))}
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody data-testid="table-body">
           {data.map((item, index) => (
             <TableRow key={index}>
               {headers.map(({ action = () => null, ...header }) => {

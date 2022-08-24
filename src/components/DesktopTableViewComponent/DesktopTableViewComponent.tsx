@@ -7,14 +7,18 @@ interface DesktopTableViewProps {
   data: Record<string, unknown>[]
   isLoading: boolean
 }
-export const DesktopTableViewComponent = ({
+const DesktopTableViewComponent = ({
   isLoading = false,
   data,
   headers,
 }: DesktopTableViewProps) => {
   return (
-    <Card sx={{ display: { xs: 'none', md: 'flex' }, mt: 5, p: 2 }}>
+    <Card
+      sx={{ display: { xs: 'none', md: 'flex' }, mt: 5, p: 2 }}
+      data-testid="desktop-view"
+    >
       <CustomTable isLoading={isLoading} data={data} headers={headers} />
     </Card>
   )
 }
+export default DesktopTableViewComponent

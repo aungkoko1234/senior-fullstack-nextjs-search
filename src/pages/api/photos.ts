@@ -5,10 +5,12 @@ import { stringify } from 'qs'
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     if (req.method !== 'GET') {
-      res.status(405).send({ message: 'Only GET requests allowed' })
+      res.status(405).json({ message: 'Only GET requests allowed' })
       return
     }
+    console.log('query', req.query)
     const url = 'photos' + stringify(req.query, { addQueryPrefix: true })
+    console.log('url', url)
 
     const response = await apiClient().get(url)
     const limit = Number(req.query['_limit'])
@@ -22,6 +24,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       message: 'Success',
     })
   } catch (e) {
+    console.log('error', e)
     return res.status(500).json({ error: 'Unexpected error.' })
   }
 }

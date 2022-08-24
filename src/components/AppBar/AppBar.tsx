@@ -20,7 +20,7 @@ const ResponsiveAppBar: React.FC<AppBarProps> = ({
   onChangeTheme,
 }) => {
   return (
-    <AppBar position="static">
+    <AppBar position="static" data-testid="app-bar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, flexGrow: 1 }}>
@@ -65,7 +65,7 @@ const ResponsiveAppBar: React.FC<AppBarProps> = ({
             </Typography>
           </Box>
 
-          <Box sx={{ flexGrow: 0, right: 0 }}>
+          <Box sx={{ flexGrow: 0, right: 0 }} data-testid="theme-switch">
             <Tooltip title="Open settings">
               <FormGroup>
                 <FormControlLabel

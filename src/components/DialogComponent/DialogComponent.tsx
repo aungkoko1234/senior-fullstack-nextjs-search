@@ -34,11 +34,12 @@ const DialogComponent: React.FC<DialogComponetProps> = ({
         TransitionComponent={Transition}
         keepMounted
         onClose={onClose}
+        data-testid="dialog"
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{title}</DialogTitle>
-        <DialogContent>{children}</DialogContent>
-        <DialogActions>
+        <DialogTitle data-testid="dialog-title">{title}</DialogTitle>
+        <DialogContent data-testid="dialog-child">{children}</DialogContent>
+        <DialogActions data-testid="dialog-actions">
           <Button onClick={() => onClose()}>Close</Button>
         </DialogActions>
       </Dialog>
