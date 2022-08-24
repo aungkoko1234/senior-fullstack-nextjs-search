@@ -12,7 +12,7 @@ import { useRouter } from 'next/router'
 import { useGetPhotos } from '../services/photos'
 import DialogComponent from '../components/DialogComponent/DialogComponent'
 import { Header, Photo } from '../lib/interfaces'
-import { DesktopTableViewComponent } from '../components/DesktopTableViewComponent/DesktopTableViewComponent'
+import DesktopTableViewComponent from '../components/DesktopTableViewComponent/DesktopTableViewComponent'
 
 export default function HomePage() {
   const [isDarkTheme, setIsDarkTheme] = useState(false)

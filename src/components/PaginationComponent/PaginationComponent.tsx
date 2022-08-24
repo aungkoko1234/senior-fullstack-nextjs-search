@@ -27,6 +27,8 @@ const PaginationComponent: React.FC<PaginationProps> = ({
       <Pagination
         count={count}
         defaultPage={current}
+        boundaryCount={1}
+        siblingCount={0}
         showFirstButton
         showLastButton
         size={size}
