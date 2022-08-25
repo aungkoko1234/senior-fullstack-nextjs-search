@@ -1,10 +1,14 @@
-# Next.js With Material Example Template
+# Photo Search Application
 
-This example template was scaffolded using [nextjs-with-typescript-example-template](https://github.com/binodnepali/nextjs-with-typescript-example-template).
+This project was scaffolded using [nextjs-with-typescript-example-template](https://github.com/binodnepali/nextjs-with-typescript-example-template).
 
-## Before getting started
+## Prerequisition
 
 Make sure you have installed [Node.js 12.22.0 or higher](https://nodejs.org/en/) on your machine. You can use [nvm](https://github.com/nvm-sh/nvm) to manage multiple node version on your machine.
+
+- [Mui](https://mui.com/) is used for crafting UI component
+- [Formik](https://formik.org/docs/overview) and [Yup] (https://www.npmjs.com/package/yup) are used for implementing Form component and Validation
+- [SWR](https://swr.vercel.app/) and [Axios](https://github.com/axios/axios) are used for developing api request and api client
 
 ## Getting started
 
@@ -15,15 +19,15 @@ You can setup this project using npm or yarn package managers.
 ### Clone repo
 
 ```bash
-git clone https://github.com/binodnepali/nextjs-with-material-ui-example-template.git
+git clone https://github.com/aungkoko1234/senior-fullstack-nextjs-search.git
 #or
-git clone git@github.com:binodnepali/nextjs-with-material-ui-example-template.git
+git@github.com:aungkoko1234/senior-fullstack-nextjs-search.git
 ```
 
 ### Navigate to cloned repo
 
 ```bash
-cd nextjs-with-material-ui-example-template
+cd senior-fullstack-nextjs-search
 ```
 
 ### Install dependencies
@@ -41,8 +45,18 @@ yarn dev
 #or
 npm run dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Testing
+I have written some UI test with Jest and api unit testing with [https://www.npmjs.com/package/node-mocks-http](node-mocks-http),[https://www.npmjs.com/package/jest](jest).
+You can test the project with following command.
+
+```bash
+yarn test
+#or
+npm run test
+```
+
 
 ### Build for production
 
@@ -72,15 +86,5 @@ yarn release
 npm run release
 ```
 
-## Learn More
-
-To learn more about Next.js, ESLint, Prettier, StyleLint and lint-staged, take a look at the following resources:
-
-* [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
-* [Next.js ESLint](https://nextjs.org/docs/basic-features/eslint) - Learn about how to Next.js ESLint setup
-* [Prettier Setup](https://prettier.io/docs/en/install.html) - Learn about how to setup prettier
-* [Prettier Integrations](https://prettier.io/docs/en/related-projects.html) - Learn about how to setup prettier with other tools
-* [ESLint Setup](https://eslint.org/docs/user-guide/getting-started) - Learn about how to ESLint
-* [StyleLint Setup](https://stylelint.io/user-guide/get-started) - Learn about how to setup StyleLint
-* [Lint Staged Setup](https://github.com/okonet/lint-staged) - Learn about how to setup lint-staged
-* [Standard Version](https://github.com/conventional-changelog/standard-version) - Learn about how to setup standar version
+### Deployment
+Currently I have deployed the project on [Vercel](https://vercel.com/) and you can check the updated project at (here)[https://senior-fullstack-nextjs-search.vercel.app/]
