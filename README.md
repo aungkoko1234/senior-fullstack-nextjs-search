@@ -7,7 +7,7 @@ This project was scaffolded using [nextjs-with-typescript-example-template](http
 Make sure you have installed [Node.js 12.22.0 or higher](https://nodejs.org/en/) on your machine. You can use [nvm](https://github.com/nvm-sh/nvm) to manage multiple node version on your machine.
 
 - [Mui](https://mui.com/) is used for crafting UI component
-- [Formik](https://formik.org/docs/overview) and [Yup] (https://www.npmjs.com/package/yup) are used for implementing Form component and Validation
+- [Formik](https://formik.org/docs/overview) and [Yup](https://www.npmjs.com/package/yup) are used for implementing Form component and Validation
 - [SWR](https://swr.vercel.app/) and [Axios](https://github.com/axios/axios) are used for developing api request and api client
 
 ## Getting started
@@ -87,4 +87,4 @@ npm run release
 ```
 
 ### Deployment
-Currently I have deployed the project on [Vercel](https://vercel.com/) and you can check the updated project at (here)[https://senior-fullstack-nextjs-search.vercel.app/]
+Currently I have deployed the project on [Vercel](https://vercel.com/) and you can check the updated project at [here](https://senior-fullstack-nextjs-search.vercel.app/)
